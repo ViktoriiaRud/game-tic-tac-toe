@@ -5,7 +5,7 @@ export const StyledButton = styled.button<ButtonPropsType>`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: ${({ theme }) => theme.fontSizeButton};
     text-transform: uppercase;
     letter-spacing: 0.2em;
     transition: background-color 200ms ease;
@@ -13,7 +13,6 @@ export const StyledButton = styled.button<ButtonPropsType>`
     line-height: 36px;
     text-align: center;
     border: none;
-    cursor: pointer;
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
 
     ${({variant}) => {

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {ButtonContainer, Game, Status, StyledBoard, StyledSquare} from "./board.styles";
 import Button from "../button";
+import Container from "../container";
 
 type Player = 'X' | 'O' | null;
 
@@ -41,20 +42,23 @@ const Board: React.FC = () => {
     const status = winner ? `Winner: ${winner}` : `Next player: ${currentPlayer}`;
 
     return (
-        <Game>
-            <Status>{status}</Status>
-            <StyledBoard>
-                {Array.from({length: 9}, (_, index) => renderSquare(index))}
-            </StyledBoard>
-            <ButtonContainer>
-                <Button variant={'green'} onClick={startGame}>
-                    Start Game
-                </Button>
-                <Button onClick={resetGame}>
-                    Reset Game
-                </Button>
-            </ButtonContainer>
-        </Game>
+        <Container>
+            <Game>
+                <h1>Game Tic-Tac-Toe</h1>
+                <Status>{status}</Status>
+                <StyledBoard>
+                    {Array.from({length: 9}, (_, index) => renderSquare(index))}
+                </StyledBoard>
+                <ButtonContainer>
+                    <Button variant={'green'} onClick={startGame}>
+                        Start Game
+                    </Button>
+                    <Button onClick={resetGame}>
+                        Reset Game
+                    </Button>
+                </ButtonContainer>
+            </Game>
+        </Container>
     );
 };
 
