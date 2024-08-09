@@ -21,8 +21,8 @@ export const StyledBoard = styled.div`
 export const StyledSquare = styled.button`
     width: 200px;
     height: 200px;
-    background-color: lightgreen;
-    border: 2px solid #000;
+    background-color: #97E773;
+    border: 2px solid #546F49;
     font-size: 24px;
     display: flex;
     justify-content: center;
@@ -32,4 +32,10 @@ export const StyledSquare = styled.button`
     &:hover {
         background-color: #f0f0f0;
     }
+`;
+
+export const ButtonContainer = styled.div`
+    margin-top: 20px;
+    display: flex;
+    gap: 34px;
 `;

@@ -1,28 +1,23 @@
-import React from 'react';
-import {StyledButton} from './button.styles';
+import React from "react";
+import {StyledButton} from "./button.styles";
 
 export type ButtonPropsType = {
     href?: string;
-    variant?:
-        | 'orange'
-        | 'green'
+    variant?: 'orange' | 'green';
     size?: 'sm' | 'md';
-    onClick?: (
-        event: React.MouseEvent<HTMLButtonElement>
-    ) => void | React.MouseEventHandler<HTMLButtonElement>;
-} & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button: React.FC<ButtonPropsType> = ({
-                                                   variant = 'orange',
-                                                   size = 'sm',
-                                                   onClick,
-                                                   href,
-                                                   children,
-                                     }) => (
-
-        <StyledButton variant={variant} size={size} as={onClick ? 'button' : 'a'} href={href}>
-            {children}
-        </StyledButton>
+                                               variant = 'orange',
+                                               size = 'sm',
+                                               onClick,
+                                               children,
+                                               ...props
+                                           }) => (
+    <StyledButton variant={variant} size={size} onClick={onClick} {...props}>
+        {children}
+    </StyledButton>
 );
 
 export default Button;

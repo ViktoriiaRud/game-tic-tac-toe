@@ -1,45 +1,43 @@
 import styled from 'styled-components';
 import {ButtonPropsType} from "./button";
 
-export const StyledButton = styled.a<ButtonPropsType>`
-    width: 100%;
-    max-width: 280px;
-    letter-spacing: 0.2em;
-    padding: 20px 20px;
-    border: 1px solid #999;
+export const StyledButton = styled.button<ButtonPropsType>`
+    display: flex;
+    justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: background-color 200ms ease;
+    font-weight: bold;
+    line-height: 36px;
     text-align: center;
-    transition-property: background-color;
-    transition-duration: 200ms;
-    transition-timing-function: ease;
+    border: none;
     cursor: pointer;
-    
-    ${({ variant }) => {
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+
+    ${({variant}) => {
         switch (variant) {
             case 'orange':
-                return (
-                        'background-color: orange; color: red; '
-                );
+                return 'background-color: #F5980F; color: #F9FC8D;' +
+                        ' &:hover {background-color: #C46403; color: #FFFFFF;}'
             case 'green':
-                return (
-                        'background-color: green; color: red; ' 
-                );
-                
+                return 'background-color: #238708; color: #F9FC8D;' +
+                        ' &:hover {background-color: #185325; color: #FFFFFF;}'
             default:
-                return 'orange';
+                return 'background-color: #F5980F; color: #F9FC8D;' +
+                        ' &:hover {background-color: green; color: #FFFFFF;}'
         }
     }}
 
-    ${({ size }) => {
+    ${({size}) => {
         switch (size) {
             case 'sm':
-                return 'padding: 8px 15px;';
+                return 'padding: 10px 16px;';
             case 'md':
-                return 'padding: 8px 26px;';
+                return 'padding: 15px 26px;';
             default:
-                return 'sm';
+                return 'padding: 10px 16px;';
         }
     }}
-    
 `;

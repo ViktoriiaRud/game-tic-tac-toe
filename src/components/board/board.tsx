@@ -1,21 +1,34 @@
-import React, { useState } from 'react';
-import { Game, Status, StyledBoard, StyledSquare } from "./board.styles";
+import React, {useState} from 'react';
+import {ButtonContainer, Game, Status, StyledBoard, StyledSquare} from "./board.styles";
+import Button from "../button";
 
 type Player = 'X' | 'O' | null;
 
 const Board: React.FC = () => {
     const [board, setBoard] = useState<Player[]>(Array(9).fill(null));
     const [currentPlayer, setCurrentPlayer] = useState<Player>('X');
+    const [gameStarted, setGameStarted] = useState<boolean>(false);
 
     const handleClick = (index: number) => {
-        if (board[index] || calculateWinner(board)) {
+        if (!gameStarted || board[index] || calculateWinner(board)) {
             return;
         }
-
         const newBoard = [...board];
         newBoard[index] = currentPlayer;
         setBoard(newBoard);
         setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
+    };
+
+    const startGame = () => {
+        setBoard(Array(9).fill(null));
+        setCurrentPlayer('X');
+        setGameStarted(true);
+    };
+
+    const resetGame = () => {
+        setBoard(Array(9).fill(null));
+        setCurrentPlayer(null);
+        setGameStarted(false);
     };
 
     const renderSquare = (index: number) => (
@@ -31,8 +44,16 @@ const Board: React.FC = () => {
         <Game>
             <Status>{status}</Status>
             <StyledBoard>
-                {Array.from({ length: 9 }, (_, index) => renderSquare(index))}
+                {Array.from({length: 9}, (_, index) => renderSquare(index))}
             </StyledBoard>
+            <ButtonContainer>
+                <Button variant={'green'} onClick={startGame}>
+                    Start Game
+                </Button>
+                <Button onClick={resetGame}>
+                    Reset Game
+                </Button>
+            </ButtonContainer>
         </Game>
     );
 };
