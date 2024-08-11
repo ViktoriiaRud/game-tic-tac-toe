@@ -1,14 +1,14 @@
 import React from 'react';
-import Board from "./components/board";
 import { ThemeProvider } from 'styled-components';
 import {theme} from "./theme/theme";
 import GlobalStyle from "./theme/globalStyles";
+import Game from "./components/game.ts";
 
 const App: React.FC = () => {
   return (
       <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Board/>
+          <Game/>
       </ThemeProvider>
   );
 };
