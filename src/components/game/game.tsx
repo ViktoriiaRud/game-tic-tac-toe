@@ -34,7 +34,7 @@ const Game: React.FC = () => {
     };
 
     const winner = calculateWinner(board);
-    const status = winner ? `Winner: ${winner}` : gameStarted ? `Next player: ${currentPlayer}` : 'Click Start to Play!';
+    const status = winner ? `Winner: ${winner}` : gameStarted ? `Next player: ${currentPlayer}` : 'Click Start to Game!';
 
     return (
         <Container>
