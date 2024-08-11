@@ -5,7 +5,7 @@ import GlobalStyle from "./theme/globalStyles";
 import Game from "./components/game";
 
 const App: React.FC = () => {
-  return (
+    return (
       <ThemeProvider theme={theme}>
           <GlobalStyle />
           <Game/>
