@@ -13,7 +13,7 @@ export const Status = styled.div`
 `;
 
 export const StyledGame = styled.div`
-    margin-top: 40px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;

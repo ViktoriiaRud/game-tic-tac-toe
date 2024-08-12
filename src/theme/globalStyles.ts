@@ -13,7 +13,10 @@ export const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
         word-break: break-word;
         font-family: "Roboto Light", sans-serif;
-        background-color: ${({theme}) => theme.colors.gray};
+        background-color: lemonchiffon;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     a[href], button {

@@ -39,7 +39,7 @@ const Game: React.FC = () => {
     return (
         <Container>
             <StyledGame>
-                <h1>Game Tic-Tac-Toe</h1>
+                <h1>Game Tic-Tac-Toe (Variant-2)</h1>
                 <Status>{status}</Status>
                 <Board board={board} onClick={handleClick}/>
                 <ButtonContainer>
