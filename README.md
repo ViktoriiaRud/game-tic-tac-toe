@@ -32,9 +32,9 @@ cd game-tic-tac-toe
 
 To run the project:
 
-`yarn install`
-`yarn start`
-`yarn test`
+### `yarn install`
+### `yarn start`
+### `yarn test`
 
 
 ### Notes
@@ -42,13 +42,13 @@ XState v5 requires TypeScript version 5.0 or greater.
 For best results, use the latest TypeScript version.
 
 To update TypeScript to the latest version, you can run:
-`npm install typescript@latest`
+### `npm install typescript@latest`
 
-### I used websites:
-https://stately.ai/docs/typescript
-https://egghead.io/lessons/xstate
-https://jestjs.io/docs/using-matchers
-https://testing-library.com/
+### I used documentation:
+[XState](https://stately.ai/docs/typescript)
+[Lessons Xstate](https://egghead.io/lessons/xstate)
+[Jest](https://jestjs.io/docs/using-matchers)
+[Testing library](https://testing-library.com/)
 
 ____________________________________________________________________________________________________________________________________________________
 
