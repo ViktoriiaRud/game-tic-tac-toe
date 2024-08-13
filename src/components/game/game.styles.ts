@@ -21,5 +21,7 @@ export const StyledGame = styled.div`
     h1 {
         font-size: ${({theme}) => theme.fontSizeTitle};
         color: black;
+        text-align: center;
+        display: block;
     }
 `;

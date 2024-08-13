@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const StyledBoard = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0.25rem;
+    grid-row-gap: 0.25rem;
     gap: ${({theme}) => theme.gap.xxs};
 `;
 

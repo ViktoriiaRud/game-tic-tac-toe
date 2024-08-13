@@ -34,7 +34,7 @@ export const StyledButton = styled.button<ButtonPropsType>`
             case 'sm':
                 return 'padding: 10px 16px;';
             case 'md':
-                return 'padding: 15px 26px;';
+                return 'padding: 10px 56px;';
             default:
                 return 'padding: 10px 16px;';
         }

@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 100px;
     }
 
     a[href], button {
@@ -25,6 +26,19 @@ export const GlobalStyle = createGlobalStyle`
 
     a[href] {
         transition: all 0.1s linear 0s;
+    }
+
+    .tile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vmin;
+        background: #F5980F;
+        color: #238708;
+    }
+
+    .tile:before {
+        content: attr(data-player);
     }
 `;
 

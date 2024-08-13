@@ -1,7 +1,10 @@
-import { useMachine } from '@xstate/react';
+import {useMachine} from '@xstate/react';
 import React from 'react';
-import './styles.css';
 import {gameMachine} from "../../gameMachine";
+import Container from "../container";
+import {StyledDraw, StyledGameMachine, StyledWinner, StyledBoardMachine} from "./gameComponent.styles";
+import Button from "../button";
+import {ButtonContainer} from "../game/game.styles";
 
 function range(start: number, end: number) {
     return Array(end - start)
@@ -29,27 +32,35 @@ export default function GameComponent() {
     const [state, send] = useMachine(gameMachine);
 
     return (
-        <div className="game">
-            <h1>Tic-Tac-Toe</h1>
-            {state.matches('gameOver') && (
-                <div>
-                    {state.hasTag('winner') && <h2>Winner: {state.context.winner}</h2>}
-                    {state.hasTag('draw') && <h2>Draw</h2>}
-                    <button onClick={() => send({ type: 'RESET' })}>Reset</button>
+        <Container>
+            <StyledGameMachine>
+                <div className="game">
+                    <h1>Game Tic-Tac-Toe</h1>
+                    <StyledBoardMachine className="board">
+                        {range(0, 9).map((index) => {
+                            return (
+                                <Tile
+                                    index={index}
+                                    onClick={() => send({type: 'PLAY', value: index})}
+                                    key={index}
+                                    player={state.context.boardGame[index]}
+                                />
+                            );
+                        })}
+                    </StyledBoardMachine>
+                    <ButtonContainer>
+                        <Button size={'md'} onClick={() => send({type: 'RESET'})}>Reset</Button>
+                    </ButtonContainer>
+                    <StyledDraw>
+                        {state.hasTag('draw') && <h2>Draw</h2>}
+                    </StyledDraw>
+                    {state.matches('gameOver') && (
+                        <StyledWinner>
+                            {state.hasTag('winner') && <h2>Winner: {state.context.winner}</h2>}
+                        </StyledWinner>
+                    )}
                 </div>
-            )}
-            <div className="board">
-                {range(0, 9).map((index) => {
-                    return (
-                        <Tile
-                            index={index}
-                            onClick={() => send({ type: 'PLAY', value: index })}
-                            key={index}
-                            player={state.context.boardGame[index]}
-                        />
-                    );
-                })}
-            </div>
-        </div>
+            </StyledGameMachine>
+        </Container>
     );
 }
