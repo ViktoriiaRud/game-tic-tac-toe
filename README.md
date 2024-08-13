@@ -23,6 +23,13 @@ This is my first time writing tests.
 
 
 #### **Setup**
+
+https://github.com/ViktoriiaRud/game-tic-tac-toe
+
+git clone https://github.com/ViktoriiaRud/game-tic-tac-toe
+
+cd game-tic-tac-toe
+
 To run the project:
 
 `yarn install`
@@ -37,6 +44,11 @@ For best results, use the latest TypeScript version.
 To update TypeScript to the latest version, you can run:
 `npm install typescript@latest`
 
+### I used websites:
+https://stately.ai/docs/typescript
+https://egghead.io/lessons/xstate
+https://jestjs.io/docs/using-matchers
+https://testing-library.com/
 
 ____________________________________________________________________________________________________________________________________________________
 
