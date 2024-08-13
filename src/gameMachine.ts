@@ -24,7 +24,7 @@ export const gameMachine = createMachine(
         initial: 'playing',
         types: {} as {
             context: typeof context;
-            events: { type: 'PLAY'; value: number } | { type: 'RESET' };
+            events: { type: 'PLAY'; value: number } |  { type: 'RESET'} ;
         },
         context,
         states: {

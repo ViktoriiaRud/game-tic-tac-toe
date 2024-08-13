@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.div`
-    margin-top: 20px;
+    margin: 20px auto;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: ${({theme}) => theme.gap.md};
 `;
 

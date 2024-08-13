@@ -49,6 +49,7 @@ export default function GameComponent() {
                         })}
                     </StyledBoardMachine>
                     <ButtonContainer>
+                        <Button variant={'green'} size={'md'} onClick={() => send({type: 'RESET'})}>Start</Button>
                         <Button size={'md'} onClick={() => send({type: 'RESET'})}>Reset</Button>
                     </ButtonContainer>
                     <StyledDraw>
