@@ -45,10 +45,10 @@ To update TypeScript to the latest version, you can run:
 ### `npm install typescript@latest`
 
 ### I used documentation:
-[XState](https://stately.ai/docs/typescript)
-[Lessons Xstate](https://egghead.io/lessons/xstate)
-[Jest](https://jestjs.io/docs/using-matchers)
-[Testing library](https://testing-library.com/)
+# XState [XState](https://stately.ai/docs/typescript)
+# Lessons Xstate [Lessons Xstate](https://egghead.io/lessons/xstate)
+# Jest [Jest](https://jestjs.io/docs/using-matchers)
+# Testing library [Testing library](https://testing-library.com/)
 
 ____________________________________________________________________________________________________________________________________________________
 
