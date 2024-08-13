@@ -1,4 +1,4 @@
-### Tic-Tac-Toe Game
+# Tic-Tac-Toe Game
 This project is a Tic-Tac-Toe game built using React and TypeScript.
 The application showcases two versions of the game:
 
@@ -45,12 +45,12 @@ To update TypeScript to the latest version, you can run:
 ### `npm install typescript@latest`
 
 ### I used documentation:
-# XState [XState](https://stately.ai/docs/typescript)
-# Lessons Xstate [Lessons Xstate](https://egghead.io/lessons/xstate)
-# Jest [Jest](https://jestjs.io/docs/using-matchers)
-# Testing library [Testing library](https://testing-library.com/)
+##### XState [XState](https://stately.ai/docs/typescript)
+##### Lessons Xstate [Lessons Xstate](https://egghead.io/lessons/xstate)
+##### Jest [Jest](https://jestjs.io/docs/using-matchers)
+##### Testing library [Testing library](https://testing-library.com/)
 
 ____________________________________________________________________________________________________________________________________________________
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
