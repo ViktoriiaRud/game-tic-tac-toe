@@ -1,6 +1,6 @@
 import {useMachine} from '@xstate/react';
 import React from 'react';
-import {gameMachine} from "../../gameMachine";
+import {gameMachine} from "../gameMachine/gameMachine";
 import Container from "../container";
 import {StyledDraw, StyledGameMachine, StyledWinner, StyledBoardMachine} from "./gameComponent.styles";
 import Button from "../button";
@@ -17,7 +17,7 @@ const Tile: React.FC<{
     onClick: () => void,
     player: 'x' | 'o' | null,
     key?: number
-}> = ({index, onClick, player, key}) => {
+}> = ({index, onClick, player}) => {
     return (
         <div
             className="tile"
